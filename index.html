@@ -8,16 +8,18 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="./particle1.js"></script>
     <script defer src="./particle2.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
     <script defer src="./script.js"></script>
 </head>
 <body>
     <nav>
-        <ul><img src="" alt=""></ul>
+        <ul><img src="./img/logo.jpg" alt=""></ul>
         <ul class="navsection">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li> 
             <li><a href="#skill">Skill</a></li>   
+            <li><a href="#project">Project</a></li>   
             <li><a href="#contact">Contact</a></li>   
         </ul>
         <ul class="bar">
@@ -44,9 +46,9 @@
     <section id="about">
         <h1>About</h1>
        <div class="section-about">
-        <div class="about-text"> <h2>I am a frontend enthusiast and dedicated React.js developer with a passion for learning new things. Aspiring to excel as a frontend developer, I started my journey in February 2024. My proactive attitude and eagerness to tackle new challenges make me a valuable addition to any team. Driven by a desire to create impactful, user-friendly web applications, I continuously strive to improve my skills and stay updated with the latest trends and technologies in web development.</h2></div>
+        <div class="about-text" data-aos="fade-right"> <h2>I am a frontend enthusiast and dedicated React.js  I started my journey in February 2024. My proactive attitude and eagerness to tackle new challenges make me a valuable addition to any team. Driven by a desire to create impactful, user-friendly web applications, I continuously strive to improve my skills and stay updated with the latest trends and technologies in web development.</h2></div>
         <div class="gif">
-         <img src="./one.webp" alt="gif">
+         <img src="./one.webp"    data-aos="fade-left"alt="gif">
         </div>
          <div id="particle2-js"></div>
       <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
@@ -54,9 +56,8 @@
     </section>
     <section id="skill">
        <h1> SKILL & EDUCATION</h1>
-    <div class="section-about">
-      
-        <div class="skill-wraper">
+    <div class="section-about">  
+        <div class="skill-wraper"  data-aos="fade-right">
             <div class="card">
                 <h2>HTML</h2>
             </div>
@@ -84,7 +85,7 @@
            <div class="education">
        
             <hr>
-            <div class="edu-wrap">
+            <div class="edu-wrap"  data-aos="fade-left">
                 <div class="diploma"><h2>Software programming diploma</h2>
                     <h4>At Navgurukul:School of programming</h4><p>I am associated with Navgurukul, an organization that further nurtures my passion for coding and development, providing me with opportunities to grow and learn within a supportive community.                </p>
                 </div>
@@ -94,10 +95,62 @@
            </div>
     </div>
     </section>
-    <section id="contact">
-      
+    <section id="project">
+        <h1>Project</h1>
+     <div class="section-about">
+        <div class="cards-project"  data-aos="fade-up" >
+            <div class="cards">
+            <div class="image">
+              <img src="./img/shiipijng.png"/>
+            </div>
+            <div class="details">
+              <div class="center">
+                <h1>Shiping Website </h1><br><br><br>
+                  <a href="https://main--shopwebapi.netlify.app/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"> </i> </a>
+                <p>Using API integraion,Zustand in react </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <!-- 2 card -->
+
+         <div class="cards-project"  data-aos="fade-up">
+            <div class="cards">
+            <div class="image">
+              <img src="./img/swigi.png"/>
+            </div>
+            <div class="details">
+              <div class="center">
+                <h1>Shiping Website </h1><br><br><br>
+                  <a href="https://main--foodappbysejal.netlify.app/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"> </i> </a>
+                <p>Using API integraion,Redux and custon hooks</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3rd card -->
+
+        <div class="cards-project" data-aos="fade-up">
+            <div class="cards">
+            <div class="image">
+              <img src="./img/weather.app.png"/>
+            </div>
+            <div class="details">
+              <div class="center">
+                <h1>Shiping Website </h1><br><br><br>
+                  <a href="https://weatherapp1-seven.vercel.app/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"> </i> </a>
+                <p>Using API integraion in react </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end -->
+     </div>
+     </section>
+    <section id="contact"> 
         <div class="section-about">
-            
             <div class="contact-wrap">
                 <h1>CONTACT</h1>
               <form class="contact-form">
@@ -116,14 +169,14 @@
         <i class="fa-brands fa-github"><a href="https://github.com/arpita-belsare">arpita-belsare</a></i>
         <i class="fa-regular fa-envelope"><a href="https://mail.google.com/mail/u/0/#inbox">arpitabelsare22@navgurukul.org</a></i>
         <i class="fa-brands fa-linkedin-in"><a href="https://www.linkedin.com/in/arpita-belsare-0b383b290">arpita-belsare</a></i>
-        <i class="fa-solid fa-phone"> +91  8411838548</i>
+        <i class="fa-solid fa-phone"> <a href="#">+91  8411838548</a></i>
        </div>
        <div class="foot-bar">
-        <ul><img src="" alt=""></ul>
         <ul class="navsection">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li> 
-            <li><a href="#skill">Skill</a></li>   
+            <li><a href="#skill">Skill</a></li> 
+            <li><a href="#project">Project</a></li>     
             <li><a href="#contact">Contact</a></li>   
         </ul>
        </div>
@@ -146,6 +199,14 @@
             loop:true
         })
     </script>
-
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+        AOS.init({
+            offset: 200,
+            delay: 1,
+            duration: 700,
+        })
+      </script>
 </body>
 </html>

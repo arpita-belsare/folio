@@ -17,7 +17,7 @@ nav{
     justify-content: space-between;
     width: 100%;
     background: rgb(16, 13, 13);
-    height: 50px;
+    height: 70px;
     position: sticky;
     top:0px;
     z-index: 1;
@@ -40,12 +40,16 @@ li a{
 .sidebar{
     display: none;
 }
+ul img{
+  width: 60px;
+  height: 90%;
+  margin-left: 5%;
+}
 section{
     height: 600px;
     color: white;
     width: 100vw;
-    /* box-shadow: 5px 1px 1px 1px rgb(49, 48, 48); */
-}
+  }
 .section-about{
     display: flex;
     justify-content: center;
@@ -60,7 +64,7 @@ section{
 display: none;
 }
 h1{
-  font-size: 2em;
+  font-size: 3em;
   text-align: center;
   color:rgb(241, 124, 144);
   margin: 40px;
@@ -130,7 +134,7 @@ gap:50px;
     position: absolute;
     width: 100vw;
     top:0;
-    height: 300%;
+    height: 400%;
     z-index: -9;
 }
 .about-text{
@@ -138,7 +142,7 @@ gap:50px;
     height: auto;
     font-size: 1em;
     font-weight:200;
-    border: 3px solid rgb(234, 156, 156);
+    border: 3px solid rgb(159, 251, 254);
     text-align: left;
     padding: 2%;
     border-radius: 15px;
@@ -178,7 +182,6 @@ gap: 4%;
     font-size: 0.9em;
     font-weight: 300;
   }
-  
   .card::before {
     content: '';
     position: absolute;
@@ -188,7 +191,6 @@ gap: 4%;
     animation: rotBGimg 3s linear infinite;
     transition: all 0.2s linear;
   }
-  
   .education{
     width: 50%;
     /* border: 2px solid red; */
@@ -215,6 +217,7 @@ gap: 4%;
     background: rgb(61, 74, 68);
     padding: 2% 4%;
   }
+
   h4{
     line-height: 25px;
   }
@@ -227,7 +230,7 @@ gap: 4%;
       transform: rotate(360deg);
     }
   }
-  
+
   .card::after {
     content: '';
     position: absolute;
@@ -239,6 +242,78 @@ gap: 4%;
     background-image: linear-gradient(180deg, rgb(81, 255, 0), rgb(223, 188, 107));
     animation: rotBGimg 3.5s linear infinite;
   } 
+  .cards-project{
+    position: relative;
+  border: 2px solid rgb(0, 255, 204);
+  width: 90%;
+  height: 450px;
+}
+  .cards {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    /* border: 2px solid blueviolet; */
+}
+.cards .image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* border: 3px solid red; */
+}
+.cards .image img {
+    width: 100%;
+    transition: .5s;
+    height: 100%;
+    object-fit: cover;
+}
+.cards:hover .image img {
+    opacity: .5;
+    transform: translateX(30%);/*100%*/
+}
+.cards .details {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 70%;/*100%*/
+    height: 90%;
+    background: #cbdde4;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+.cards:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+.cards .details .center {
+    padding: 20px;       
+    text-align: center;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.cards .details .center h1 {
+    margin: 0;
+    padding: 0;
+    color: #ff3636;
+    line-height: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.cards .details .center h1 span {
+    font-size: 14px;
+    color: #262626;
+}
+.cards .details .center p {
+    margin: 10px 0;
+    padding: 0;
+    color: #262626;
+}
   #contact{
     background-image: url('./img/istockphoto-1193685384-1024x1024.jpg');
     background-repeat: no-repeat;
@@ -305,7 +380,7 @@ gap: 4%;
  
   /* Footer Styles */
 .footer {
-  background: #282c34;
+  background: #0e1015;
   color: #fff;
   text-align: center;
   padding:  50px 30px;
