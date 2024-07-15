@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const barElement = document.querySelector('.bar');
+    const barElement = document.querySelector('.menu-bar');
     const sidebar = document.getElementById('sidebar');
     const closeBtn = document.getElementById('closeBtn');
 
@@ -8,6 +8,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function toggleSidebar() {
         sidebar.classList.toggle('open');
-        barElement.classList.toggle('hidden');
     }
 });
