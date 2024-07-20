@@ -92,7 +92,7 @@ background: white;
 .sidebar a img{
   width: 30px;
   height: 30px;
-  
+
 }
 
 .sidebar .closebtn {
@@ -208,7 +208,7 @@ gap:50px;
     background: #24203a;
 }
 
-body.dark-mode .about-text{
+.about-text{
   background: #24203a;
   width: 40%;
     height: auto;
@@ -297,7 +297,16 @@ gap: 4%;
     padding: 0.9rem;
     line-height: 20px;
     box-shadow: 0px 1rem 1.5rem -0.9rem #434141e1;
-
+    color: white;
+  }
+  .degree p,.diploma p, .hsc p{
+    color: gray;
+  }
+.edu-wrap h2{
+color: white;
+}
+  .edu-wrap h4{
+    color: rgb(215, 211, 211);
   }
   @keyframes rotBGimg {
     from {
@@ -537,6 +546,116 @@ gap: 4%;
   color: rgb(255, 143, 162);
   font-weight: 600;
 }
+body {
+  background: #ffffff;
+  color: #000000;
+}
+/* Dark mode styles */
+body.dark-mode {
+  background: #121212;
+  color: #ffffff;
+}
+nav {
+  background: #f0f0f0;
+}
+body.dark-mode nav {
+  background: #333333;
+}
+nav ul li a {
+  color: #000;
+}
+body.dark-mode nav ul li a {
+  color: #fff;
+}
+.footer {
+  background: #ffffff;
+  color: #000;
+  text-align: center;
+  padding: 50px 30px;
+}
+
+/* Dark mode footer styles */
+body.dark-mode .footer {
+  background: #0e1015;
+  color: #fff;
+}
+
+.foot-bar {
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.foot-bar .navsection {
+  display: flex;
+  /* border: 2px solid rebeccapurple; */
+  justify-content: center;
+  width: 100%;
+  gap: 5%;
+}
+
+.foot-bar ul li {
+  list-style-type: none;
+}
+
+.foot-bar ul li a,
+.social-media a {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent */
+  font-weight: 600;
+  font-size: 1.2em;
+  margin: 5px;
+}
+
+span.auto-type2 {
+  font-size: 1.5em;
+  color: rgb(255, 143, 162);
+  font-weight: 600;
+}
+.degree, .diploma, .hsc {
+  width: 90%;
+  height: auto;
+  background: whitesmoke;
+  padding: 1% 5%;
+  border-radius: 0 80px 80px 0px;
+  padding: 0.9rem;
+  line-height: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+.edu-wrap h2{
+  color: #000;
+}
+.edu-wrap h4{
+  color: rgb(52, 50, 50);
+}
+.about-text {
+  background: white;
+  color: darkgray;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+border: 1px solid lightcyan;
+}
+body.dark-mode .degree, body.dark-mode .diploma, body.dark-mode .hsc {
+  background: linear-gradient(135deg, #0d1120 0%, #3a4b8a 43%, #0d1120 100%);
+  box-shadow: 0px 1rem 1.5rem -0.9rem #434141e1;
+  color: black;
+}
+body.dark-mode .edu-wrap h2{
+  color:white;
+}
+body.dark-mode .edu-wrap p{
+  color:rgb(230, 211, 211);
+}
+body.dark-mode .edu-wrap h4{
+  color:rgb(216, 208, 208);
+}
+body.dark-mode .about-text{
+  background: #24203a;
+    border: 3px solid rgb(6, 27, 53);
+    background: rgba(20, 20, 35, 0.992);
+    color: white;
+}
 @media screen and (max-width: 823px) and (min-width:500px) {
 nav{
   width: 100vw;
@@ -694,9 +813,10 @@ margin:100px 0px;
       } 
       #particles-js{
         height: 80vh;
+        width: 100vw;
       }
       #heading{
-        width: 90%;
+        width: 90vw;
         position: absolute;
         top:40%;
         text-align: center;
@@ -716,12 +836,14 @@ margin:100px 0px;
     }
     #home{
       height: auto;
+      width: 9dvh;
     }
     .sidebar{
       z-index:999;
     }
     #about{
       height: auto;
+      width: 100vw;
     }
     .about-text{
       width: 90vw;
@@ -729,8 +851,11 @@ margin:100px 0px;
       margin: 10px;
     }
     .gif{
-width:90vw;
+width:80vw;
 margin: 10px;
+    }
+    .gif img{
+      width: 90%;
     }
     .card {
         margin: 15px;
@@ -777,106 +902,22 @@ margin: 10px;
   height: auto;
   padding: 30px 0;
  }
-
  #contact{
   height: 100vh;
+  width: 100vw;
  }
  .contact-wrap{
   background: rgba(139, 166, 166, 0.9);
+  width: 100vw;
  }
  .social-media,.contact-form{
   width: 90vw;
  }
-
-}
-body {
-  background: #ffffff;
-  color: #000000;
-}
-/* Dark mode styles */
-body.dark-mode {
-  background: #121212;
-  color: #ffffff;
-}
-nav {
-  background: #f0f0f0;
-}
-body.dark-mode nav {
-  background: #333333;
-}
-nav ul li a {
-  color: #000;
-}
-body.dark-mode nav ul li a {
-  color: #fff;
-}
-.footer {
-  background: #ffffff;
-  color: #000;
-  text-align: center;
-  padding: 50px 30px;
+ .footer{
+  width: 100vw;
+ }
+.social-media i {
+  font-size: 0.8em;
 }
 
-/* Dark mode footer styles */
-body.dark-mode .footer {
-  background: #0e1015;
-  color: #fff;
-}
-
-.foot-bar {
-  width: 100%;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: center;
-}
-
-.foot-bar .navsection {
-  display: flex;
-  /* border: 2px solid rebeccapurple; */
-  justify-content: center;
-  width: 100%;
-  gap: 5%;
-}
-
-.foot-bar ul li {
-  list-style-type: none;
-}
-
-.foot-bar ul li a,
-.social-media a {
-  text-decoration: none;
-  color: inherit; /* Inherit color from parent */
-  font-weight: 600;
-  font-size: 1.2em;
-  margin: 5px;
-}
-
-span.auto-type2 {
-  font-size: 1.5em;
-  color: rgb(255, 143, 162);
-  font-weight: 600;
-}
-.degree, .diploma, .hsc {
-  width: 90%;
-  height: auto;
-  background: whitesmoke;
-  padding: 1% 5%;
-  border-radius: 0 80px 80px 0px;
-  padding: 0.9rem;
-  line-height: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  color: #000000;
-}
-.degree p,.diploma p, .hsc p{
-  color: gray;
-}
-.about-text {
-  background: white;
-  color: darkgray;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-border: 1px solid lightcyan;
-}
-body.dark-mode .degree, body.dark-mode .diploma, body.dark-mode .hsc {
-  background: linear-gradient(135deg, #0d1120 0%, #3a4b8a 43%, #0d1120 100%);
-  box-shadow: 0px 1rem 1.5rem -0.9rem #434141e1;
 }
