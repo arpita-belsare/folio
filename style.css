@@ -58,14 +58,15 @@ nav ul li a {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color:rgb(31, 52, 52);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
 }
 
 .sidebar.open {
-  width: 250px;
+  width: 50%;
+  z-index: 991;
 }
 
 .sidebar a {
@@ -74,11 +75,13 @@ nav ul li a {
   font-size: 25px;
   color: white;
   display: block;
-  transition: 0.3s;
+  transition: 0.4s;
+  position: sticky;
 }
-
 .sidebar a:hover {
   color: #f1f1f1;
+  padding: 15px 20px;
+  background:rgb(38, 61, 61);
 }
 
 .sidebar .closebtn {
@@ -87,6 +90,7 @@ nav ul li a {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+
 }
 
 section{
@@ -197,6 +201,7 @@ gap:50px;
     height:auto;
 border-radius: 50%;
 }
+
 .card {
     width: 90px;
     height: 110px;
@@ -218,7 +223,7 @@ align-items: center;
 justify-content: center;
 flex-wrap: wrap;
 gap: 4%;
-/* border: 2px solid red; */
+
 }
   .card h2 {
     z-index: 1;
@@ -241,29 +246,33 @@ gap: 4%;
     display: flex;
     height: 90%;
   }
-  hr{
-    width: 20px;
+  .line{
+    width: 12px;
     background: rgb(97, 80, 80);
     margin: 12px;
+    border-radius: 50px;
+    height: 450px;
   }
   .edu-wrap{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    gap:40px;
+    gap:10px;
     width: 80%;
   }
   .diploma,.degree,.hsc{
     width: 90%;
     height: auto;
     border: 1px solid lightcyan;
-    background: rgb(61, 74, 68);
-    padding: 2% 4%;
-  }
+    /* background: rgb(61, 74, 68,0.4); */
+    padding: 1% 5%;
+    border-radius: 0 80px 80px 0px;
+    background: linear-gradient(135deg, #0d1120 0%, #3a4b8a 43%, #0d1120 100%);
+    padding: 0.9rem;
+    line-height: 20px;
+    box-shadow: 0px 1rem 1.5rem -0.9rem #434141e1;
 
-  h4{
-    line-height: 25px;
   }
   @keyframes rotBGimg {
     from {
@@ -296,7 +305,7 @@ gap: 4%;
     flex-wrap: wrap;
     align-items: center;
     display:flex;
-    gap:0%;
+    gap:4% 0%;
     height:60vh;
   }
   .cards-project{
@@ -384,24 +393,52 @@ gap: 4%;
     justify-self: start;
     height: 110vh;
   }
+  #contact h1{
+    width: 100%;
+  }
     .contact-wrap {
     width: 100%;
-    background: rgba(94, 109, 111, 0.9);
+    background: #5e6d6fe6;
     height: 80%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+  }
+  .social-media{
+    width:40%;
+    display: flex;
+    justify-content: center;
+    margin:20px;
+    flex-direction: column;
+  }
+  .social-media i{
+    width: 90%;
+  padding:2% 4%;
+  background: rgb(252, 249, 255);
+  border: 2px solid rgb(185, 177, 177);
+  margin: 2% 0%;
+  transition: 0.5s;
+  color: #000;
+  }
+  .social-media i:hover{
+    padding: 2.5% 4.1%;
+    background: rgb(236, 232, 238);
+  }
+  .social-media a:any-link{
+    color: #777373;
+  }
+  .social-media a:hover,.foot-bar ul li a:hover{
+    color: rgb(214, 205, 205);
   }
   
   .contact-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
-    margin: 20px;
+    width: 40%;
+    margin: 20px 5px;
   }
-
   .names {
     display: flex;
     width: 100%;
@@ -428,14 +465,16 @@ gap: 4%;
   }
   button {
     padding: 10px 30px;
-    background-color: #0048ff;
+    background-color: #2160ff;
     color: white;
     border: none;
+    font-size: 1em;
     cursor: pointer;
     margin-top: 10px;
   }
   button:hover {
     background-color: #003bb5;
+    padding: 1.7% 4%;
   }
   /* Footer Styles */
 .footer {
@@ -444,30 +483,7 @@ gap: 4%;
   text-align: center;
   padding:  50px 30px;
 }
-.social-media{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap:2%;
-  margin:20px;
-}
-.social-media p {
-  font-size: 1em;
-  font-family: sans-serif;
-}
-.social-media a{
-  color: white;
-  margin: 5px;
-}
-.fot a{
-  color: #f1f1f1;
-}
-.fot a:hover{
-  color: rgb(215, 205, 205);
-}
-.social-media a:hover{
-  color: rgb(214, 205, 205);
-}
+
 .foot-bar{
   width: 100%;
   padding: 20px 40px;
@@ -484,9 +500,22 @@ gap: 4%;
 .foot-bar ul li{
   list-style-type: none;
 }
-@media screen and (max-width: 828px) and (min-width:500px) {
+.foot-bar ul li a,.social-media a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin: 5px;
+}
+ span.auto-type2{
+  font-size: 1.5em;
+  color: rgb(255, 143, 162);
+  font-weight: 600;
+}
+@media screen and (max-width: 823px) and (min-width:500px) {
 nav{
-  width: 100%;
+  width: 100vw;
+  z-index: 99;
 } 
 .menu-bar img{
       display: flex;
@@ -500,12 +529,16 @@ nav{
       display: block;
       height: auto;
     } 
+    #particles-js{
+      height: 80vh;
+    }
     #heading{
       width: 80%;
       position: absolute;
-      top:20%;
+      top:40%;
       text-align: center;
-      gap:20px;
+      gap:40px;
+      height: 100vh;
     }
     #heading h1{
       font-size: 3em;
@@ -516,91 +549,219 @@ nav{
       text-align: center;
   }
   h1{
-    margin: 0%;
+    margin:  30px 0%;
+  }
+  .sidebar{
+    z-index:999;
   }
   #home{
-    height: auto;
+    height: 90vh;
   }
   .section-about{
     display: flex;
-    flex-direction: column;
     height: auto;
-    padding: 0 2%;
+    padding: 0 1%;
     align-items: center;
-    max-height: 200vh;
+    flex-wrap: wrap;
+    gap:10px;
+  }
+  #particle2-js{
+    height: 300%;
   }
   .edu-section{
     height: 1000px;
   }
   .about-text{
-width: 80%;
+width: 40%;
 font-size: 0.9em;
+margin:  0 10px 0 0 ;
   }
-  hr{
-    height: 80%;
+  #skill h1{
+    width: 100%;
+  }
+  .gif{
+    width: 40%;
+    height: 90%;
+  }
+  .gif img{
+    width: 100%;
   }
   .skill-wraper{
-    width: 90%;
+    width: 90vw;
   }
-  .education{
-    width: 90%;
-  }
-  .edu-wrap{
-     gap: 15px;
-  }
+ .skill-wraper{
+  width: 90vw;
+  padding: 2%;
+ }
+ .education{
+  width: 100vw;
+  padding: 1%;
+  height: auto;
+ }
+.edu-wrap{
+  width: 100%;
+  height: auto;
+  align-items: center;
+  padding: 0%;
+  gap:5%;
+}
+ .line{
+  height:430px;
+ }
+ .degree,.diploma,.hsc{
+  width: 100%;
+ }
   #project{
-    margin-top: 400px;
+    margin-top: 450px;
+    height: auto;
   }
   .project-wraper{
 display:flex ;
-/* flex-wrap: wrap; */
 width: 100%;
 gap:0;
 margin:100px 0px;
-
   }
   .cards-project{
     width: 40%;
-    /* margin:  20px 1% ; */
     margin-top: 0%;
+    margin: 20px 10px;
   }
   #contact{
-    margin-top: 800px;
-    height: 60vh;
+    height: 75vh;
+    padding:  2% 0%;
   }
+  .social-media {
+    flex-wrap: wrap;
+    padding: 30px ;
+    gap:25px;
+    width:50%;
+  }
+.social-media i{
+  width: 100%;
+  padding: 1% 2%;
+}
   .fot a{
         color: white;
   }
   .contact-wrap{
     padding: 30px 0;
   }
-
 }
 @media screen  and (max-width:450px) {
   nav{
-    width: 100%;
+    width: 100vw;
+    z-index: 99;
   } 
+  .nav ul{
+    width: 100%;
+  }
   .menu-bar img{
         display: flex;
         width: 24px;
         height: 24px;
     }
     .navsection {
-        display: none;
-    }
-#about,#contact,#skill{
-    display: block;
-}
-  .footer .container {
-    flex-direction: column;
-  }
-  .footer-section {
-    flex: 1 1 100%;
-    margin: 10px 0;
-  }
-  #to-top {
-    bottom: 20px;
-    right: 20px;
-  }
-}
+       display: none;     
+    } 
+     .section-about{
+        display: block;
+        height: auto;
+      } 
+      #particles-js{
+        height: 80vh;
+      }
+      #heading{
+        width: 90%;
+        position: absolute;
+        top:40%;
+        text-align: center;
+        gap:50px;
+        height: 100vh;
 
+      }
+      #heading h1{
+        font-size: 3em;
+        letter-spacing: 0.05em;   
+        font-weight: 500;
+        margin-bottom: 0px;
+        color: #58fb58;
+        text-align: center;
+    }
+    h1{
+      margin:  20px 0%;
+    }
+    #home{
+      height: auto;
+    }
+    .sidebar{
+      z-index:999;
+    }
+    #about{
+      height: auto;
+    }
+    .about-text{
+      width: 90vw;
+      padding: 2%;
+      margin: 10px;
+    }
+    .gif{
+width:90vw;
+margin: 10px;
+    }
+    .card {
+        margin: 15px;
+      }
+      .skill-wraper{
+    width: 100%;
+    padding: 2%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5%;
+    }
+ #skill{
+  height: auto;
+ } 
+ .education{
+  width: 100vw;
+  padding: 2% 3%;
+ }
+ .edu-section{
+  width: 100%;
+ }
+ .edu-wrap{
+  width: 100%;
+ }
+ .line{
+  height: 500px;
+ }
+ .degree,.diploma,.hsc{
+  width: 100%;
+ }
+ .project-wraper{
+  width: 100vw;
+  padding: 2% 20px;
+  gap:20px;
+ }
+ .cards-project{
+  width: 90%;
+  margin: 30px 0%;
+ }
+ #project{
+  height: auto;
+  padding: 30px 0;
+ }
+
+ #contact{
+  height: 95vh;
+ }
+ .contact-wrap{
+  background: rgba(2, 3, 3, 0.9);
+ }
+ .social-media,.contact-form{
+  width: 90vw;
+ }
+
+}
